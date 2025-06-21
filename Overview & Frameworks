@@ -1,0 +1,49 @@
+# 💳 Online Payment Fraud Detection
+
+## 📄 Description and Purpose
+This project focuses on detecting fraudulent transactions in online payment systems using machine learning techniques. As digital payments become more common, financial platforms face increasing threats from sophisticated fraud schemes. The goal of this project is to build a predictive model that accurately classifies transactions as either legitimate or fraudulent based on historical transaction data. By leveraging features such as transaction amount, type, user behavior, and time of transaction, the model aims to identify patterns commonly associated with fraud. The purpose is to support real-time fraud prevention, reduce financial losses, and enhance the security and reliability of online payment systems.
+
+---
+
+## 📌 Task Objective
+To develop a machine learning-based classification model capable of identifying fraudulent payment transactions with high accuracy, minimizing both false positives and false negatives to ensure customer trust and operational efficiency.
+
+---
+
+## 📊 Dataset Used
+- **Source**: [Kaggle - Fraud Detection in Online Payments](https://www.kaggle.com/datasets)
+- **Size**: ~6 million transaction records
+- **Features Include**:
+  - `type`: Type of transaction (e.g., CASH_OUT, TRANSFER)
+  - `amount`: Transaction amount
+  - `oldbalanceOrg`: Sender’s balance before transaction
+  - `newbalanceOrig`: Sender’s balance after transaction
+  - `oldbalanceDest`: Receiver’s balance before transaction
+  - `newbalanceDest`: Receiver’s balance after transaction
+  - `isFraud`: Binary label (0 = genuine, 1 = fraud)
+
+---
+
+## 🧠 Models Applied
+- Logistic Regression (baseline)
+- Random Forest Classifier
+- XGBoost Classifier
+- LightGBM
+- Neural Networks (optional/advanced)
+- Techniques used:
+  - SMOTE (Synthetic Minority Oversampling Technique) to handle class imbalance
+  - Feature selection and normalization
+  - Cross-validation and grid search for hyperparameter tuning
+
+---
+
+## 📈 Key Results and Findings
+- **Best Performing Model**: XGBoost achieved an accuracy of 99.4% and recall of 92.3%.
+- **Recall** was prioritized to reduce false negatives (missed frauds).
+- SMOTE effectively addressed the imbalance between fraudulent and legitimate transactions.
+- Feature importance analysis revealed `type`, `amount`, and `oldbalanceOrg` as key predictors.
+
+---
+
+## 📂 File Structure
+
